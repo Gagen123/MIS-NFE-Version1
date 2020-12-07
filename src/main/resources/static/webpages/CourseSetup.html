@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:20 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>NFE System</title>
+		
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		
+		<!-- Feathericon CSS -->
+        <link rel="stylesheet" href="assets/css/feathericon.min.css">
+		
+		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+		
+		
+    </head>
+    <body>
+	
+		<!-- Main Wrapper -->
+         <div class="header">
+			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/logo1.png" alt="Logo" >
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo1.png" alt="Logo">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<div class="top-nav-search">
+					<form>
+						<input type="text" class="form-control" placeholder="Search here">
+						<button class="btn" type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->
+				
+				<!-- Header Right Menu -->
+				<ul class="nav user-menu">
+
+					<!-- Notifications -->
+					<li class="nav-item dropdown noti-dropdown">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
+						</a>
+						<div class="dropdown-menu notifications">
+							<div class="topnav-dropdown-header">
+								<span class="notification-title">Notifications</span>
+								<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+							</div>
+							<div class="noti-content">
+								<ul class="notification-list">
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"><span class="noti-title">NFE-Center</span> Schedule <span class="noti-title">appointment for you</span></p>
+													<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"><span class="noti-title">Sangay Dorji, Principal</span> has Send you Form For Verification</p>
+													<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+												<p class="noti-details"><span class="noti-title">Gagen</span> Your Learner had drop to 7<span class="noti-title">time to closed the center</span></p>
+												<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="topnav-dropdown-footer">
+								<a href="#">View all Notifications</a>
+							</div>
+						</div>
+					</li>
+					<!-- /Notifications -->
+					
+					<!-- User Menu -->
+					<li class="nav-item dropdown has-arrow">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<span class="user-img"><img class="rounded-circle" src="assets/img/profile.png" width="31" alt="Ryan Taylor"></span>
+						</a>
+						<div class="dropdown-menu">
+							<div class="user-header">
+								<div class="avatar avatar-sm">
+									<img src="assets/img/profile.png" alt="User Image" class="avatar-img rounded-circle">
+								</div>
+								<div class="user-text">
+									<h6>Gagendra Ghalley</h6>
+									<p class="text-muted mb-0">PLC, Instructor</p>
+								</div>
+							</div>
+							<a class="dropdown-item" href="profile.html">My Profile</a>
+						
+							<a class="dropdown-item" href="login.html">Logout</a>
+						</div>
+					</li>
+					<!-- /User Menu -->
+					
+				</ul>
+				<!-- /Header Right Menu -->
+				
+            </div>
+			<!-- /Header -->
+			
+				<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							
+							<li class="active"> 
+								<a href="/"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+							</li>
+							 
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Master SetUp</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;"> 
+									<li><a href="Configuration1">Questionary/Checklist Configuration page 1</a></li>
+									<li><a href="Configuration2">Questionary/Checklist Configuration page 2</a></li>
+									
+								</ul>
+							</li>
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Set Up</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li>
+									<a href="CourseSetup">CourseSetup Form</a></li> 
+									<li><a href="CourseSetup">Skill Setup Form</a></li>
+									<li><a href="LearnerProfile">Learner Profile </a></li>
+									<li><a href="InstructorProfile">Instructor Profile </a></li>
+									<li><a href="CenterProfile">Center Profile </a></li>
+								</ul>
+							</li>
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;" id="form">
+									
+
+									
+									<li><a href="New-opening-form">New Center Opening Form</a>
+									<li><a href="Feasibility">Feasibility Study</a>
+									<li><a href="MonitoringA.html">Monitoring Tool A</a>
+									</li></li>
+								</ul>
+							</li>
+							
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Monitoring Tools </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Certificates  </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+							
+							<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Monitoring Tools  </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+							
+							
+							
+								</ul>
+							</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+			
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			<div class="container-fluid">
+                     
+                        <div class="row">
+                            
+
+                           	<div class="col-xl-12">
+                                <div class="card card-statistics">
+                                	<div class="page-header">
+						<div class="row">
+							<div class="col-sm-7 col-auto">
+								<h3 class="page-title">Course Set up</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+									<li class="breadcrumb-item active">Course Set up</li>
+								</ul>
+							</div>
+							<div class="col-sm-5 col">
+								<button href="#Add_Specialities_details" data-toggle="modal" class="btn btn-primary float-right mt-2">Add More</button>>
+							</div>
+						</div>
+					</div>
+
+							<div class="card">
+
+								<div class="card-body">
+									
+									<div class="table-responsive">
+										<table class="datatable table table-hover table-center mb-0">
+											<thead>
+												<tr>
+                                                        <th>SI.No</th>
+                                                        <th>Name Of Course</th>
+                                                        <th>Intial</th>
+                                                        <th>Course Duration</th>
+                                                        <th>Total Hours</th>
+                                                        <th>Status</th>
+                                                        <th class="text-right">Action</th>
+                                                    </tr>
+											</thead>
+											<tbody>
+												<tr>
+                                                        <td>1</td>
+                                                        <td>Basic Learning Course</td>
+                                                        <td>BLC</td>
+                                                        <td>1 year</td>
+                                                        <td>200 hrs</td>
+                                                        <td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
+														</div>
+													</td>
+                                                        <td class="text-right">
+														<div class="actions">
+															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
+																<i class="fe fe-pencil"></i> Edit
+															</a>
+															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
+																<i class="fe fe-trash"></i> Delete
+															</a>
+														</div>
+													</td>
+
+                                                    </tr>
+												<tr>
+                                                
+                                                        <td>2</td>
+                                                        <td>Post Literacy Course</td>
+                                                        <td>PLC</td>
+                                                        <td>1 year</td>
+                                                        <td>200 hours</td>
+                                                        <td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_2" class="check" checked>
+															<label for="status_2" class="checktoggle">checkbox</label>
+														</div>
+													</td>
+                                                        <td class="text-right">
+														<div class="actions">
+															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
+																<i class="fe fe-pencil"></i> Edit
+															</a>
+															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
+																<i class="fe fe-trash"></i> Delete
+															</a>
+														</div>
+													</td>
+                                                    </tr>
+												<tr>
+													<td>3</td>
+                                                        <td>Advanced Learning Course</td>
+                                                        <td>ALC</td>
+                                                        <td>2 year</td>
+                                                        <td>900 hours</td>
+                                                        <td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_3" class="check" checked>
+															<label for="status_3" class="checktoggle">checkbox</label>
+														</div>
+													</td>
+												
+													<td class="text-right">
+														<div class="actions">
+															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
+																<i class="fe fe-pencil"></i> Edit
+															</a>
+															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
+																<i class="fe fe-trash"></i> Delete
+															</a>
+														</div>
+													</td>
+												</tr>
+											
+												
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+
+					<div class="modal fade" id="edit_specialities_details" aria-hidden="true" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document" >
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Edit Course SetUp Form</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						  <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Name Of Course*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Basic Learning Course">
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Initials*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="BLC">
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Course Duration*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="1 year">
+                                               
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Total Teaching Hours*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="200 hours">
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Status*</h6></label>
+                                                <td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_4" class="check" checked>
+															<label for="status_4" class="checktoggle">checkbox</label>
+														</div>
+													</td>
+                                               
+                                            </div>
+                                            <a href="javascript:void(0);" class="btn btn-primary">Reset</a>
+                                           
+                                            <button type="submit" class="btn btn-primary">Save</button>
+                                        </form>
+
+                                    </div>
+					</div>
+				</div>
+			</div>
+			<!-- /Edit Details Modal -->
+			
+			<!-- Delete Modal -->
+			<div class="modal fade" id="delete_modal" aria-hidden="true" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document" >
+					<div class="modal-content">
+					
+						<div class="modal-body">
+							<div class="form-content p-2">
+								<h4 class="modal-title">Delete</h4>
+								<p class="mb-4">Are you sure want to delete?</p>
+								<button type="button" class="btn btn-primary">Save </button>
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="Add_Specialities_details" aria-hidden="true" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document" >
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Add New Course</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						  <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Name Of Course*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name Of the Course">
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Initials*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name the initial">
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Course Duration*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Course duration">
+                                               
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Total Teaching Hours*</h6></label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter total teaching hours">
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><h6>Status*</h6></label>
+                                                   <td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_5" class="check" checked>
+															<label for="status_5" class="checktoggle">checkbox</label>
+														</div>
+													</td>
+                                               
+                                            </div>
+                                            <a href="javascript:void(0);" class="btn btn-primary">Reset</a>
+                                           
+                                            <button type="submit" class="btn btn-primary">Save</button>
+                                        </form>
+
+                                    </div>
+					</div>
+				</div>
+			</div>
+                            
+                            </div>
+
+                        </div>
+
+                        <!-- end row -->
+                    </div>
+              			
+			</div>
+			<!-- /Page Wrapper -->
+		
+       
+		
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+         <script src="assets/js/jquery-3.2.1.min.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- Slimscroll JS -->
+        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		
+		<!-- Custom JS -->
+		<script src="assets/js/script.js"></script>
+		
+    </body>
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:20 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>NFE System</title>
+		
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		
+		<!-- Feathericon CSS -->
+        <link rel="stylesheet" href="assets/css/feathericon.min.css">
+		
+		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+		
+		
+    </head>
+    <body>
+	
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">
+		
+			<!-- Header -->
+            <div class="header">
+			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/logo1.png" alt="Logo" >
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo1.png" alt="Logo">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<div class="top-nav-search">
+					<form>
+						<input type="text" class="form-control" placeholder="Search here">
+						<button class="btn" type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->
+				
+				<!-- Header Right Menu -->
+				<ul class="nav user-menu">
+
+					<!-- Notifications -->
+					<li class="nav-item dropdown noti-dropdown">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
+						</a>
+						<div class="dropdown-menu notifications">
+							<div class="topnav-dropdown-header">
+								<span class="notification-title">Notifications</span>
+								<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+							</div>
+							<div class="noti-content">
+								<ul class="notification-list">
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"><span class="noti-title">NFE-Center</span> Schedule <span class="noti-title">appointment for you</span></p>
+													<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"><span class="noti-title">Sangay Dorji, Principal</span> has Send you Form For Verification</p>
+													<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+												<p class="noti-details"><span class="noti-title">Gagen</span> Your Learner had drop to 7<span class="noti-title">time to closed the center</span></p>
+												<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="topnav-dropdown-footer">
+								<a href="#">View all Notifications</a>
+							</div>
+						</div>
+					</li>
+					<!-- /Notifications -->
+					
+					<!-- User Menu -->
+					<li class="nav-item dropdown has-arrow">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<span class="user-img"><img class="rounded-circle" src="assets/img/profile.png" width="31" alt="Ryan Taylor"></span>
+						</a>
+						<div class="dropdown-menu">
+							<div class="user-header">
+								<div class="avatar avatar-sm">
+									<img src="assets/img/profile.png" alt="User Image" class="avatar-img rounded-circle">
+								</div>
+								<div class="user-text">
+									<h6>Gagendra Ghalley</h6>
+									<p class="text-muted mb-0">PLC, Instructor</p>
+								</div>
+							</div>
+							<a class="dropdown-item" href="profile.html">My Profile</a>
+						
+							<a class="dropdown-item" href="login.html">Logout</a>
+						</div>
+					</li>
+					<!-- /User Menu -->
+					
+				</ul>
+				<!-- /Header Right Menu -->
+				
+            </div>
+			<!-- /Header -->
+			
+			<!-- Sidebar -->
+            	<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							
+							<li class="active"> 
+								<a href="/"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+							</li>
+							 
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Master SetUp</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;"> 
+									<li><a href="Configuration1">Questionary/Checklist Configuration page 1</a></li>
+									<li><a href="Configuration2">Questionary/Checklist Configuration page 2</a></li>
+									
+								</ul>
+							</li>
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Set Up</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li>
+									<a href="CourseSetup">CourseSetup Form</a></li> 
+									<li><a href="CourseSetup">Skill Setup Form</a></li>
+									<li><a href="LearnerProfile">Learner Profile </a></li>
+									<li><a href="InstructorProfile">Instructor Profile </a></li>
+									<li><a href="CenterProfile">Center Profile </a></li>
+								</ul>
+							</li>
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;" id="form">
+									
+
+									
+									<li><a href="New-opening-form">New Center Opening Form</a>
+									<li><a href="Feasibility">Feasibility Study</a>
+									<li><a href="MonitoringA.html">Monitoring Tool A</a>
+									</li></li>
+								</ul>
+							</li>
+							
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Monitoring Tools </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Certificates  </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+							
+							<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Monitoring Tools  </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+							
+							
+							
+								</ul>
+							</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+			
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+          	<div class="container-fluid">
+
+                            <div class="form-group col-md-12 ">  
+                                <img src="assets/img/profile.png" style="height: 100px;width: 100px;margin-left: 400px;border:1px 1px 1px #111" class="rounded-circle" alt="avtar-img">
+                                <span><i class="fa fa-upload"></i> Upload Photo</span>
+								<input type="file" class="upload">
+
+                            </div>
+
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-md-12 m-b-30">
+                                <!-- begin page title -->
+                                <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                                    <div class="page-title mb-2 mb-sm-0">
+                                        <h3 class="card-title center">Personal Information</h3>
+                                      
+                                    </div>
+                                    <div class="ml-auto d-flex align-items-center">
+                                        <nav>
+                                            <ol class="breadcrumb p-0 m-b-0">
+                                                <li class="breadcrumb-item">
+                                                    <a href="index.html"><i class="ti ti-home"></i></a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    Forms
+                                                </li>
+                                                <li class="breadcrumb-item active text-primary" aria-current="page">Learner's Profile Form</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- end page title -->
+                            </div>
+                        
+                      
+                        
+                            <div class="col-md-12">
+                                
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                   
+                                                    <label class="card-title"><h5>CID No:</h5></label>
+                                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Enter the cid number of learner">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputPassword4"><h5>Learner ID:</h5></label>
+                                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Enter the ID of learner">
+                                                </div>
+                                                   
+                                                </div>
+                                           
+                                            
+                                            <div class="form-row">
+                                                
+                                                <div class="form-group col-md-6">
+                                                  
+                                                    <label><h5>Name Of Leraner:</h5></label>
+                                                    <select class="custom-select">
+                                                    <option selected>Name will automatically pull</option>
+                                                    <option value="1">Sonam</option>
+                                                    <option value="2">Dorji</option>
+                                                    <option value="3">Wangchuk</option>
+                                                    </select>
+                                                </div>
+
+                                                  <div class="form-group col-md-6">
+                                                  
+                                                    <label><h5>Gender:</h5></label>
+                                                    <select class="custom-select">
+                                                    <option selected>Gender will automatically pull</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                                    
+                                                    </select>
+                                                </div>
+                                                </div>
+                                                  <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label><h5>Date Of Birth:</h5></label>
+                                                     <div class="form-group mb-0">
+                                                        <input type="text" class="form-control date-picker-default" value="Date will pull automatically">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label><h5>Date Of Admission:</h5></label>
+                                                     <div class="form-group mb-0">
+                                                        <input type="text" class="form-control date-picker-default" value="Date will pull automatically">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputPassword4"><h5>Contact No:</h5></label>
+                                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Contact number will automatically pull">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputPassword4"><h5>Type Of Course Attending:</h5></label>
+                                                    <select class="custom-select">
+                                                   <option selected>Type of course will automatically pull</option>
+                                                    <option value="1">ALC</option>
+                                                    <option value="2">PLC</option>
+                                                    <option value="2">BLC</option>
+                                                    
+                                                    </select>
+                                                </div>
+                                               
+                                            </div>
+                                             <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="inputPassword4"><h5>Type of Skill:</h5></label>
+                                                    <select class="custom-select">
+                                                   <option selected>Type of skill will automatically pull</option>
+                                                    <option value="1">Taloring</option>
+                                                    <option value="2">Baking</option>
+                                                    
+                                                    </select>
+                                                </div>
+                                               
+                                            </div>
+                                          
+                                          
+                                            </div>
+                
+                                            </div>
+                                              <div class="col-xl-12">
+                                <div class="card card-statistics">
+                                    <div class="card-header">
+                                        <div class="card-heading">
+                                            <h4 class="card-title">Permanent Address</h4>
+                                        </div>
+                                    </div>
+                                      <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table display responsive nowrap table-light table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>SI.No</th>
+                                                        <th>Dzongkhag</th>
+                                                        <th>Gewog</th>
+                                                        <th>Village</th>
+                                                        <th>House No</th>
+                                                        <th>Tharm No</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Gelephu</td>
+                                                        <td>Perligang</td>
+                                                        <td>Lucker Tar</td>
+                                                        <td>Pa-5-200</td>
+                                                        <td>169/200</td>
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <a href="javascript:void(0);" class="btn btn-primary">Edit</a>
+                                 <a href="javascript:void(0);" class="btn btn-primary">Print</a>
+                            </div>
+
+
+                        </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+		
+        </div>
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- Slimscroll JS -->
+        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		
+		<script src="assets/plugins/raphael/raphael.min.js"></script>    
+		<script src="assets/plugins/morris/morris.min.js"></script>  
+		<script src="assets/js/chart.morris.js"></script>
+		
+		<!-- Custom JS -->
+		<script  src="assets/js/script.js"></script>
+		
+    </body>
+
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:34 GMT -->
+</html>

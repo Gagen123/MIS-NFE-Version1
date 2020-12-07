@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+ <head>
+  		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>NFE System</title>
+		
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		
+		<!-- Feathericon CSS -->
+        <link rel="stylesheet" href="assets/css/feathericon.min.css">
+		
+		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+    <body>
+	
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">
+		
+			<!-- Header -->
+            <div class="header">
+			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/logo1.png" alt="Logo" >
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo1.png" alt="Logo">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<div class="top-nav-search">
+					<form>
+						<input type="text" class="form-control" placeholder="Search here">
+						<button class="btn" type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->
+				
+				<!-- Header Right Menu -->
+				<ul class="nav user-menu">
+
+					<!-- Notifications -->
+					<li class="nav-item dropdown noti-dropdown">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
+						</a>
+						<div class="dropdown-menu notifications">
+							<div class="topnav-dropdown-header">
+								<span class="notification-title">Notifications</span>
+								<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+							</div>
+							<div class="noti-content">
+								<ul class="notification-list">
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"><span class="noti-title">NFE-Center</span> Schedule <span class="noti-title">appointment for you</span></p>
+													<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"><span class="noti-title">Sangay Dorji, Principal</span> has Send you Form For Verification</p>
+													<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="#">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profile.png">
+												</span>
+												<div class="media-body">
+												<p class="noti-details"><span class="noti-title">Gagen</span> Your Learner had drop to 7<span class="noti-title">time to closed the center</span></p>
+												<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="topnav-dropdown-footer">
+								<a href="#">View all Notifications</a>
+							</div>
+						</div>
+					</li>
+					<!-- /Notifications -->
+					
+					<!-- User Menu -->
+					<li class="nav-item dropdown has-arrow">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<span class="user-img"><img class="rounded-circle" src="assets/img/profile.png" width="31" alt="Ryan Taylor"></span>
+						</a>
+						<div class="dropdown-menu">
+							<div class="user-header">
+								<div class="avatar avatar-sm">
+									<img src="assets/img/profile.png" alt="User Image" class="avatar-img rounded-circle">
+								</div>
+								<div class="user-text">
+									<h6>Gagendra Ghalley</h6>
+									<p class="text-muted mb-0">PLC, Instructor</p>
+								</div>
+							</div>
+							<a class="dropdown-item" href="profile.html">My Profile</a>
+						
+							<a class="dropdown-item" href="login.html">Logout</a>
+						</div>
+					</li>
+					<!-- /User Menu -->
+					
+				</ul>
+				<!-- /Header Right Menu -->
+				
+            </div>
+			<!-- /Header -->
+			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							
+							<li class="active"> 
+								<a href="/"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+							</li>
+							 
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Master SetUp</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;"> 
+									<li><a href="Configuration1">Questionary/Checklist Configuration page 1</a></li>
+									<li><a href="Configuration2">Questionary/Checklist Configuration page 2</a></li>
+									
+								</ul>
+							</li>
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Set Up</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li>
+									<a href="CourseSetup">CourseSetup Form</a></li> 
+									<li><a href="CourseSetup">Skill Setup Form</a></li>
+									<li><a href="LearnerProfile">Learner Profile </a></li>
+									<li><a href="InstructorProfile">Instructor Profile </a></li>
+									<li><a href="CenterProfile">Center Profile </a></li>
+								</ul>
+							</li>
+							<li class="submenu" id="masterform">
+								<a href="#"><i class="fe fe-layout"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;" id="form">
+									
+
+									
+									<li><a href="New-opening-form">New Center Opening Form</a>
+									<li><a href="Feasibility">Feasibility Study</a>
+									<li><a href="MonitoringA.html">Monitoring Tool A</a>
+									</li></li>
+								</ul>
+							</li>
+							
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Monitoring Tools </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+								<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Certificates  </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+							
+							<li class="submenu">
+								<a href="#"><i class="fe fe-layout"></i> <span> Monitoring Tools  </span> <span class="menu-arrow"></span></a>
+								
+							</li>
+							
+							
+							
+								</ul>
+							</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+			
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+                <div class="content container-fluid">
+					
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-12">
+								<h5 class="page-title" >Welcome Back <span style="color:green">Gagen!</span></h5>
+								
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+
+					<div class="row">
+						<div class="col-xl-3 col-sm-6 col-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="dash-widget-header">
+										<span class="dash-widget-icon text-primary border-primary">
+											<i class="fe fe-users"></i>
+										</span>
+										<div class="dash-count">
+											<h3>50</h3>
+										</div>
+									</div>
+									<div class="dash-widget-info">
+										<h6 class="text-muted"><b>Total NFE Center</b></h6>
+										<div class="progress progress-sm">
+											<div class="progress-bar bg-primary w-50"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-6 col-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="dash-widget-header">
+										<span class="dash-widget-icon text-success">
+											<i class="fe fe-credit-card"></i>
+										</span>
+										<div class="dash-count">
+											<h3>100</h3>
+										</div>
+									</div>
+									<div class="dash-widget-info">
+										
+										<h6 class="text-muted"><b>Total ALC Center</b></h6>
+										<div class="progress progress-sm">
+											<div class="progress-bar bg-success w-50"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-6 col-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="dash-widget-header">
+										<span class="dash-widget-icon text-danger border-danger">
+											<i class="fe fe-money"></i>
+										</span>
+										<div class="dash-count">
+											<h3>150</h3>
+										</div>
+									</div>
+									<div class="dash-widget-info">
+										
+										<h6 class="text-muted"><b>Total BLC Center</b></h6>
+										<div class="progress progress-sm">
+											<div class="progress-bar bg-danger w-50"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-6 col-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="dash-widget-header">
+										<span class="dash-widget-icon text-warning border-warning">
+											<i class="fe fe-folder"></i>
+										</span>
+										<div class="dash-count">
+											<h3>200</h3>
+										</div>
+									</div>
+									<div class="dash-widget-info">
+										
+										<h6 class="text-muted"><b>Total PLC Center</b></h6>
+										<div class="progress progress-sm">
+											<div class="progress-bar bg-warning w-50"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-6">
+						
+							<!-- Sales Chart -->
+							<div class="card card-chart">
+								<div class="card-header">
+									<h4 class="text-muted"><b>NFE Center in Bhutan</b></h4>
+									
+								</div>
+								<div class="card-body">
+									<div id="morrisArea"></div>
+								</div>
+							</div>
+							<!-- /Sales Chart -->
+							
+						</div>
+						<div class="col-md-12 col-lg-6">
+						
+							<!-- Invoice Chart -->
+							<div class="card card-chart">
+								<div class="card-header">
+									<h4 class="text-muted"><b>Literacy Rate in Bhutan</b></h4>
+									
+								</div>
+								<div class="card-body">
+									<div id="morrisLine"></div>
+								</div>
+							</div>
+							<!-- /Invoice Chart -->
+							
+						</div>	
+					</div>
+					
+					
+                <div class="content container-fluid">
+				
+					<h4 class="text-muted"><b>Lists Of NFE Center in Bhutan</b></h4>
+					<div class="row">
+						<div class="col-md-12">
+						
+							<!-- Recent Orders -->
+							<div class="card">
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="datatable table table-hover table-center mb-0">
+											<thead>
+												<tr>
+													<th>Sl.No</th>
+													<th>Name Of Center</th>
+													<th>Dzongkhag</th>
+													<th>Year of Establishment</th>
+													<th>Number Of Learner</th>
+													<th>Current Status</th>
+													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>AAAA</td>
+													<td>Thimphu</td>
+													<td>23-08-2018</td>
+													<td>15</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>2</td>
+													<td>BBBB</td>
+													<td>Thimphu</td>
+													<td>23-08-2018</td>
+													<td>1O</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_2" class="check" >
+															<label for="status_2" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>3</td>
+													<td>CCCC</td>
+													<td>Thimphu</td>
+													<td>23-08-2016</td>
+													<td>20</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_3" class="check" checked>
+															<label for="status_3" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>4</td>
+													<td>DDDD</td>
+													<td>Paro</td>
+													<td>23-08-2010</td>
+													<td>17</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_4" class="check" >
+															<label for="status_4" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>5</td>
+													<td>EEEE</td>
+													<td>Thimphu</td>
+													<td>23-08-2017</td>
+													<td>15</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_5" class="check" checked>
+															<label for="status_5" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>FFFF</td>
+													<td>Gelephu</td>
+													<td>23-08-2018</td>
+													<td>20</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_6" class="check" checked>
+															<label for="status_6" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>7</td>
+													<td>GGGG</td>
+													<td>Gelephu</td>
+													<td>23-08-2020</td>
+													<td>11</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_7" class="check" >
+															<label for="status_7" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>8</td>
+													<td>HHHH</td>
+													<td>Samtse</td>
+													<td>23-08-2012</td>
+													<td>20</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_10" class="check" checked>
+															<label for="status_10" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>9</td>
+													<td>IIII</td>
+													<td>S/J</td>
+													<td>23-08-2016</td>
+													<td>17</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_9" class="check" >
+															<label for="status_9" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+
+												<tr>
+													<td>10</td>
+													<td>JJJJ</td>
+													<td>Thimphu</td>
+													<td>23-08-2017</td>
+													<td>20</td>
+													<td class="text-right">
+														<div class="status-toggle">
+															<input type="checkbox" id="status_5" class="check" checked>
+															<label for="status_5" class="checktoggle">checkbox</label>
+														</div>
+													
+													</td>
+												</tr>
+												
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- /Recent Orders -->
+							
+						</div>
+					</div>
+							
+			</div>
+					
+				</div>			
+			</div>
+			<!-- /Page Wrapper -->
+		
+        </div>
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+		<div id="script">
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- Slimscroll JS -->
+        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script src="assets/plugins/datatables/datatables.min.js"></script>
+		<script src="assets/plugins/raphael/raphael.min.js"></script>    
+		<script src="assets/plugins/morris/morris.min.js"></script>  
+		<script src="assets/js/chart.morris.js"></script>
+		
+		<!-- Custom JS -->
+		<script  src="assets/js/script.js"></script>
+	</div>
+    </body>
+
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:34 GMT -->
+</html>
+
+<script>
+	const hd =new XMLHttpRequest();
+	const container =document.getElementById('header');
+
+	hd.onload = function(){
+		if (this.status === 200) {
+			container.innerHTML = hd.responseText;
+		}else{
+			console.warn('Donot response correctly');
+		}
+	};
+	
+	hd.open('get','header.html');
+	hd.send();
+
+
+</script>
